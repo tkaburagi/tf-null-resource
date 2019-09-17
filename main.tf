@@ -11,7 +11,7 @@ provider "aws" {
 
 resource "null_resource" "invoked_by_user_creation" {
 	triggers = {
-		iam_user = aws_iam_user.lb.id
+		resource_typ = aws_iam_user
 	}
 	provisioner "local-exec" {
 		command = "echo INVOKED"
