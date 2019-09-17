@@ -10,7 +10,7 @@ provider "aws" {
 
 
 resource "null_resource" "invoked_by_user_creation" {
-	triggers {
+	triggers = {
 		iam_user = aws_iam_user.lb.id
 	}
 	provisioner "local-exec" {
