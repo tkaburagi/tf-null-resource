@@ -52,8 +52,10 @@ resource "aws_iam_user_policy" "lb_ro" {
 EOF
 }
 
-resource "aws_instance" "hello-tf-instance" {
-	ami = "ami-06d9ad3f86032262d"
-	count = 1
-	instance_type = "t2.micro"
-}
+//Comment-in in second execution and pleas confirm null_resource is not invoked.
+
+//resource "aws_instance" "hello-tf-instance" {
+//	ami = "ami-06d9ad3f86032262d"
+//	count = 1
+//	instance_type = "t2.micro"
+//}
